@@ -12,7 +12,7 @@ PwmOut motor2(MOTOR2);
 PwmOut motor3(MOTOR3);
 PwmOut motor4(MOTOR4);
 
-// Main program
+// Main program e variáveis
 int tempo = 0;
 int fim = 0;
 int main()
