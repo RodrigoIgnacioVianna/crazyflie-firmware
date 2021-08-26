@@ -14,4 +14,7 @@ const float I_yy = 16.0e-6; // kg.m^2
 const float I_zz = 29.0e-6; // kg.m^2
 const float l = 33.0e-3;    // m
 
+const float a1 = pow(2.802, -12);
+const float a2 = pow(1.16, -8);
+
 #endif
