@@ -8,6 +8,7 @@ DigitalOut led_verde_L(LED_GREEN_L,!false);
 DigitalOut led_verde_R(LED_GREEN_R,!false);
 // Define all motors as PWM objects
 PwmOut motor(MOTOR1);
+motor.period(1.0/500.0);
 
 
 float control_motor(float omega_r) {
@@ -16,34 +17,20 @@ float control_motor(float omega_r) {
 }
 int main()
 {
-   
-        
-        }
-    
-    // Blink blue LED indicating inicialization (5 seconds)
-    
-    // Turn on red LEDs indicating motors are armed
-    
-    // Test all motors with different frequencies (to make different noises)
-    
-    // Turn off red LEDs indicating motors are disarmed
-    
-    // Blink green LEDs indicating end of program
+    //turn on motor 1 with 1000 rad/s for 0.5s
+    motor= control_motor(1000);
+    wait(0.5);
+    //Turn off motor 1
+    motor=0.0;
+
     while(true)
     {
-        if (fim==1){
-            led_verde_L=!led_verde_L;
-            wait(0.2);
-            led_verde_R=!led_verde_R;
-            wait(0.2);
-
-
-        }
+    }
        
         }
         
 
         
         
-    }
+    
 
