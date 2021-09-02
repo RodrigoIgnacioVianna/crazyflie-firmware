@@ -17,5 +17,5 @@ const float l = 33.0e-3;    // m
 const float a2 = 2.802e-12;
 const float a1 = 1.16e-7;
 const float kl= 1.589e-8;
-
+const float kd= 1.322e-10;
 #endif
