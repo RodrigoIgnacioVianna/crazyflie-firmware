@@ -12,6 +12,9 @@
 #include "drivers/vl53l0x.h"    // Range sensor
 #include "drivers/pmw3901.h"    // Optical flow sensor
 
+//incluir mixer.h
+#include "mixer.h"
+
 // Crazyflie 2.1 hardware abstraction layer
 // #include "drivers/bmi088.h"     // IMU sensor
 
