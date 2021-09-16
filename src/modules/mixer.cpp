@@ -1,6 +1,6 @@
 #include "mixer.h"
 //Class constructor
-Mixer :: Mixer(): motor1(MOTOR1),motor2(MOTOR2),motor3(MOTOR3),motor4(MOTOR4)
+Mixer :: Mixer(): motor1(MOTOR1),motor2(MOTOR2),motor3(MOTOR3),motor4(MOTOR4),led_vermelho_L(LED_RED_L)//,led_vermelho_R(LED_RED_R)
 {
     motor1.period(1.0/500.0);
     motor2.period(1.0/500.0);
@@ -11,10 +11,41 @@ Mixer :: Mixer(): motor1(MOTOR1),motor2(MOTOR2),motor3(MOTOR3),motor4(MOTOR4)
     motor3=0;
     motor4=0;
 }
+//Blink red LEDs
+// , LED_GREEN_L, LED_GREEN_R;
+void Mixer :: blink_reds(){
+  //  while(tempo<=5){
+   // led_vermelho_L=!led_vermelho_L;
+   // wait(0.5);
+   // tempo++;
+
+    //}
+    led_vermelho_L=0;
+    wait(0.5);
+    led_vermelho_L=1;
+    wait(0.5);
+    led_vermelho_L= 0;
+    wait(0.5);
+    led_vermelho_L=1;
+    wait(0.5);
+    led_vermelho_L= 0;
+    wait(0.5);
+    led_vermelho_L=1;
+    wait(0.5);
+    led_vermelho_L= 0;
+    wait(0.5);
+    led_vermelho_L=1;
+    wait(0.5);
+    led_vermelho_L= 0;
+    wait(0.5);
+    led_vermelho_L=1;
+    wait(0.5);
+
+} 
 //Arm and disarm
 void Mixer :: arm(){
     armed=true;
-    //blink_reds();
+    blink_reds();
     //wait(5);
 }
 
@@ -26,30 +57,24 @@ void Mixer :: disarm(){
     motor4=0;
 
 }
-//Blink red LEDs
-// , LED_GREEN_L, LED_GREEN_R;
-//void Mixer :: blink_reds(): led_red_esq(LED_RED_L),led_red_dir(LED_RED_R){
-  //  led_red_esq= !led_red_esq;
-    //led_red_dir= !led_red_dir;
-    //wait(0.5);
 
-//} 
 //Actuate motors with desired thrust force (N) and torques (N.m)
 void Mixer :: actuate(float f_t, float tau_phi, float tau_theta,float tau_psi)
 {
     if(armed){
     //led_red_dir=true;
     //led_red_esq=true;
+    
     mixer(f_t, tau_phi, tau_theta, tau_psi);
     motor1= control_motor(omega_1);
     motor2= control_motor(omega_2);
     motor3= control_motor(omega_3);
     motor4= control_motor(omega_4);
     }
-    else{
-        led_green_dir=true;
-        led_green_esq=true;
-    }
+    //else{
+      //  led_green_dir=true;
+        //led_green_esq=true;
+    //}
 }
 //Convert total thrust force (N) and torques (N.m) to angular velocities (rad/s)
 void Mixer :: mixer(float f_t, float tau_phi, float tau_theta, float tau_psi){

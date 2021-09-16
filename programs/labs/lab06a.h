@@ -6,7 +6,8 @@ Mixer mixer;
 //Main program
 int main(){
     //Arm mixer
-    //mixer.arm();
+    mixer.arm();
+    //mixer.blink_reds();
     //Actuate motor with 70%mg total thrust force and zero torques
     mixer.actuate(0,0,0,-0.001);
     wait(5);

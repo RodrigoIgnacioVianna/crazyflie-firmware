@@ -15,7 +15,8 @@ public:
     void arm();
     void disarm();
     //Blink red LEDs
-    //void blink_reds();
+    void blink_reds();
+    
 private:
     //Motors PWM outputs
     PwmOut motor1, motor2, motor3, motor4;
@@ -28,7 +29,8 @@ private:
     //Armed or not variable
     bool armed;
     //LEDs
-   // DigitalOut led_red_esq,led_red_dir,led_green_esq,led_green_dir;
+    DigitalOut led_vermelho_L;//,led_vermelho_R;
+    //int tempo;
     
 };
 
