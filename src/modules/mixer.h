@@ -11,6 +11,11 @@ public:
     Mixer();
     //Actuate motors with desired total thrust force (N) and torques (N.m)
     void actuate(float f_t, float tau_phi, float tau_theta,float tau_psi);
+    //Arm and disarm mixer
+    void arm();
+    void disarm();
+    //Blink red LEDs
+    //void blink_reds();
 private:
     //Motors PWM outputs
     PwmOut motor1, motor2, motor3, motor4;
@@ -20,6 +25,11 @@ private:
     void mixer(float f_t, float tau_phi, float tau_theta, float tau_psi);
     //Convert desired angular velocity (rad/s) to PWM signal (%)
     float control_motor(float omega_r);
+    //Armed or not variable
+    bool armed;
+    //LEDs
+   // DigitalOut led_red_esq,led_red_dir,led_green_esq,led_green_dir;
+    
 };
 
 #endif
