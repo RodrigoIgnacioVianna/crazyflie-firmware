@@ -18,4 +18,7 @@ const float a2 = 2.802e-12;
 const float a1 = 1.16e-7;
 const float kl= 1.589e-8;
 const float kd= 1.322e-10;
+const float wc=1; //rad/s
+const float delta_t=0.1;
+const float alfa = (wc*delta_t)/(1+wc*delta_t)
 #endif

@@ -22,6 +22,7 @@ void AttitudeEstimator :: estimate()
 {
   imu.read();
   float phi_a=atan2(-ay;-az);
-  phi= phi_a;  
+  //phi= phi_a;  
+
 
 }
