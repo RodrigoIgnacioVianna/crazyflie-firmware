@@ -7,4 +7,4 @@
  //#include "programs/examples/ex06_flow.h"
 
 // Lab programs
-#include "programs/examples/ex04_imu.h"
+#include "programs/labs/lab07.h"
