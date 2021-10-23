@@ -21,7 +21,7 @@ class AttitudeEstimator
     private:
         //IMU SENSOR   OBJECT
         BMI088 imu;
-        float p_bias;
+        float p_bias, q_bias, r_bias;
     
 };
 
