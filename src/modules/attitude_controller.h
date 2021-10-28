@@ -16,7 +16,7 @@ class AttitudeController
     float tau_phi, tau_theta, tau_psi;
  private:
     //Controll torque (N.m) given reference angle (rad) and current angle (rad) and angular velocity (rad/s) with given controller gains
-    float control_siso(float angle_r, float angle, float rate, float kp_att, float kd_att);
+    float control_siso(float angle_r, float angle, float rate, float kp_c, float kd_c);
 
 };
 

@@ -21,4 +21,13 @@ const float kd= 1.322e-10;
 const float wc=1.2; //rad/s
 const float dt=0.02;
 const float alfa = (wc*dt)/(1+wc*dt);
+
+const float OS=0.005;
+const float TS= 0.3; //s
+
+const float zetta = abs(log(OS))/sqrt(pi*pi+log(OS)*log(OS));
+const float wn = 4/(TS*zetta);
+const float kp_att=wn*wn;
+const float kd_att=2*zetta*wn; 
+
 #endif
