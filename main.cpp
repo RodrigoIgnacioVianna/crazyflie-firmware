@@ -7,4 +7,6 @@
  //#include "programs/examples/ex06_flow.h"
 
 // Lab programs
-#include "programs/labs/lab07.h"
+//#include "programs/labs/lab08.h"
+#include "programs/examples/ex05_range.h"
+

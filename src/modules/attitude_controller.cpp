@@ -6,6 +6,7 @@ AttitudeController :: AttitudeController()
     tau_phi=0;
     tau_theta=0;
     tau_psi=0;
+    
 
 }   
 

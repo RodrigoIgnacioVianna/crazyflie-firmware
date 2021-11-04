@@ -9,8 +9,8 @@
 //#include "drivers/mpu9250.h"    // IMU sensor
 
 // Flow deck hardware abstraction layer
-#include "drivers/vl53l0x.h"    // Range sensor
-#include "drivers/pmw3901.h"    // Optical flow sensor
+//#include "drivers/vl53l0x.h"    // Range sensor
+//#include "drivers/pmw3901.h"    // Optical flow sensor
 
 //incluir mixer.h
 #include "modules/mixer.h"
@@ -23,7 +23,7 @@
 
 
 // Flow deck v2 hardware abstraction layer
-// #include "drivers/vl53l1x.h"    // Range sensor
-// #include "drivers/pmw3901.h"    // Optical flow sensor
+ #include "drivers/vl53l1x.h"    // Range sensor
+ #include "drivers/pmw3901.h"    // Optical flow sensor
 
 #endif

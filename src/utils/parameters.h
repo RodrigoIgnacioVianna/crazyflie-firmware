@@ -19,15 +19,15 @@ const float a1 = 1.16e-7;
 const float kl= 1.589e-8;
 const float kd= 1.322e-10;
 const float wc=1.2; //rad/s
-const float dt=0.02;
-const float alfa = (wc*dt)/(1+wc*dt);
+const float dt=0.002;
+const float alfa = (wc*dt)/(1.0+wc*dt);
 
 const float OS=0.005;
 const float TS= 0.3; //s
 
 const float zetta = abs(log(OS))/sqrt(pi*pi+log(OS)*log(OS));
-const float wn = 4/(TS*zetta);
+const float wn = 4.0/(TS*zetta);
 const float kp_att=wn*wn;
-const float kd_att=2*zetta*wn; 
+const float kd_att=2.0*zetta*wn; 
 
 #endif
