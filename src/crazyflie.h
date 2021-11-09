@@ -12,20 +12,16 @@
 //#include "drivers/vl53l0x.h"    // Range sensor
 //#include "drivers/pmw3901.h"    // Optical flow sensor
 
-//incluir mixer.h
-#include "modules/mixer.h"
-
 // Crazyflie 2.1 hardware abstraction layer
- #include "drivers/bmi088.h"     // IMU sensor
- //incluir estimador ded attitude
- #include "modules/attitude_estimator.h"
- #include "modules/attitude_controller.h"
-//include vertical estimator
-
-#include "modules/vertical_estimator.h"
-
+#include "drivers/bmi088.h"     // IMU sensor
+ 
 // Flow deck v2 hardware abstraction layer
- #include "drivers/vl53l1x.h"    // Range sensor
- #include "drivers/pmw3901.h"    // Optical flow sensor
+#include "drivers/vl53l1x.h"    // Range sensor
+#include "drivers/pmw3901.h"    // Optical flow sensor
+
+#include "modules/mixer.h"
+#include "modules/attitude_estimator.h"
+#include "modules/attitude_controller.h"
+#include "modules/vertical_estimator.h"
 
 #endif
