@@ -20,7 +20,9 @@
  //incluir estimador ded attitude
  #include "modules/attitude_estimator.h"
  #include "modules/attitude_controller.h"
+//include vertical estimator
 
+#include "modules/vertical_estimator.h"
 
 // Flow deck v2 hardware abstraction layer
  #include "drivers/vl53l1x.h"    // Range sensor
