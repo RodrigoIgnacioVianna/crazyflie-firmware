@@ -19,8 +19,11 @@ void VerticalEstimator :: init()
 //Predict vertical position and velocity from model
 void VerticalEstimator :: predict(float f_t)
 {
-    w=w;
     z=z+w*dt_range;
+    if(z>0.05)
+    {
+        w=w+((1/m)*f_t-g)*dt_range;
+    }
 
 }
 
