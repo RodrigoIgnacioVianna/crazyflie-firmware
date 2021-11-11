@@ -28,12 +28,25 @@ const float zeta_ver=sqrt(2)/2;
 const float L1=wc_ver*wc_ver;
 const float L2= 2*zeta_ver*wc_ver;
 
-const float OS=0.005;
-const float TS= 0.3; //s
+const float OS_att=0.005;
+const float TS_att= 0.3; //s
 
-const float zetta = abs(log(OS))/sqrt(pi*pi+log(OS)*log(OS));
-const float wn = 4.0/(TS*zetta);
-const float kp_att=wn*wn;
-const float kd_att=2.0*zetta*wn; 
+const float zetta_att = abs(log(OS_att))/sqrt(pi*pi+log(OS_att)*log(OS_att));
+const float wn_att = 4.0/(TS_att*zetta_att);
+const float kp_att=wn_att*wn_att;
+const float kd_att=2.0*zetta_att*wn_att;
+
+
+
+const float OS_ver=0.005;
+const float TS_ver= 2; //s
+const float zetta_ver = abs(log(OS_ver))/sqrt(pi*pi+log(OS_ver)*log(OS_ver));
+const float wn_ver = 4.0/(TS_ver*zetta_ver);
+const float kp_ver=wn_ver*wn_ver;
+const float kd_ver=2.0*zetta_ver*wn_ver;
+
+
+
+
 
 #endif

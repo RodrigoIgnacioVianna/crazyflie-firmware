@@ -1,29 +1,22 @@
 #include "vertical_controller.h"
 
 //Class constructor
-VerticalController :: VerticalController() : range(E_SDA,E_SCL)
+VerticalController :: VerticalController() 
 {
-    z=0;
-    w=0;
-
-    
-    
+    f_t=0.0;
 
 }   
 
-//Control torques (N.m) given reference angles (rad) and current angles (rad) and angular velocities (rad/s)
-void VerticalController :: control(float z_r, float z, float w);
+//Control thrust force (N) given vertical position (m) and velocity (m/s)
+void VerticalController :: control(float z_r, float z, float w)
 {
-    tau_phi= I_xx*control_siso(phi_r, phi,p,kp_att, kd_att);
-    tau_theta= I_yy*control_siso(theta_r, theta,q,kp_att, kd_att);
-    tau_psi= I_zz*control_siso(psi_r, psi,r,kp_att, kd_att);
+    f_t=m*(g+control_siso(z_r,z,w,kp_ver,kd_ver));
     
-
 }
 
-//Control torques (N.m) given reference angle (rad) and current angle (rad) and angular velocities (rad/s) with given controller gains
-float VerticalController :: control_siso(float dist_r, float dist , float vel, float kp_ver_c, float kd_ver_c);
+//Control aceleration given reference position (m) and current position (m) and velocity (m/s) with given controller gains
+float VerticalController :: control_siso(float pos_r, float pos , float vel, float kp_ver_c, float kd_ver_c)
 {
-    return kp_c*(angle_r-angle)+kd_c*(-rate);
+    return kp_ver_c*(pos_r-pos)+kd_ver_c*(-vel);
 
 }
