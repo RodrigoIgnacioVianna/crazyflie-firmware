@@ -59,8 +59,8 @@ void AttitudeEstimator :: estimate()
   
   
   //phi,theta e psi finais
-  phi=(1-alfa)*phi_g+alfa*phi_a;
-  theta=(1-alfa)*theta_g+alfa*theta_a;
+  phi=(1.0-alfa)*phi_g+alfa*phi_a;
+  theta=(1.0-alfa)*theta_g+alfa*theta_a;
   psi=psi_g;
 
   
