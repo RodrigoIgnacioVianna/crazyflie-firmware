@@ -52,6 +52,17 @@ const float kp_ver=wn_ver*wn_ver;
 const float kd_ver=2.0*zetta_ver*wn_ver;
 
 
+const float W=420;//pixels
+const float gama= (2*pi/180)*42;//rad
+const float sigma= (2*tan(gama/2))/(W*dt);
+
+
+const float L_hor=50;
+
+
+
+
+
 
 
 
