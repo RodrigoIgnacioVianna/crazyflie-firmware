@@ -59,6 +59,14 @@ const float sigma= (2*tan(gama/2))/(W*dt);
 
 const float L_hor=50;
 
+//cálculo ganhos controlador horizontal
+const float OS_hor=0.005;
+const float TS_hor= 2.0; //s
+const float zetta_hor = abs(log(OS_hor))/sqrt(pi*pi+log(OS_hor)*log(OS_hor));
+const float wn_hor = 4.0/(TS_hor*zetta_hor);
+const float kp_hor=wn_hor*wn_hor;
+const float kd_hor=2.0*zetta_hor*wn_hor;
+
 
 
 
