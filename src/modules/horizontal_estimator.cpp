@@ -35,10 +35,10 @@ void HorizontalEstimator :: correct(float phi, float theta, float p, float q, fl
     {
         flow.read();
         float d=z/den;
-        float u_m= u + L_hor*dt*(u_m-u);
-        float v_m= v + L_hor*dt*(v_m-v);
-        u=u_m;
-        v=v_m;
+        float u_m= (sigma*flow.px+q)*d;
+        float v_m= (sigma*flow.py-p)*d;
+        u += L_hor*dt*(u_m-u);
+        v += L_hor*dt*(v_m-v);
     }
 
 }
