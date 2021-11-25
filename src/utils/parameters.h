@@ -18,7 +18,7 @@ const float a2 = 2.802e-12;
 const float a1 = 1.16e-7;
 const float kl= 1.589e-8;
 const float kd= 1.322e-10;
-const float wc=1.2; //rad/s
+const float wc=1; //rad/s
 const float wc_ver=10;//frequência de corte estimador vertical
 const float dt=0.002;//s
 const float dt_range=0.05;//s
@@ -53,7 +53,7 @@ const float kd_ver=2.0*zetta_ver*wn_ver;
 
 
 const float W=420;//pixels
-const float gama= (2*pi/180)*42;//rad
+const float gama= (pi/180)*42;//rad
 const float sigma= (2*tan(gama/2))/(W*dt);
 
 

@@ -10,8 +10,8 @@ class HorizontalController
  public:
     //Class constructor
     HorizontalController();
-    //Control 
-    void control(float x_r,float x, float u, float y_r, float y, float v);
+    //Control reference roll and pitch angles (rad) given reference horizontal positions (m) and current horizontal positions (m) and velocities (m/s)
+    void control(float x_r,float y_r, float x, float y, float u, float v);
     //  theta e phi referernce
     float theta_r, phi_r;
 
